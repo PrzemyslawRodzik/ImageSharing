@@ -21,10 +21,10 @@
 
 /* Podglad email */
 
-Route::get('/email',function (){
+/*Route::get('/email',function (){
 
    return new \App\Mail\NewUserWelcomeMail();
-});
+});*/
 /* Podglad email */
 
 /* Strona startowa  */
