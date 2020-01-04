@@ -51,36 +51,36 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown d-flex align-items-center">
+
 
                                 @if(Auth::user()->hasAnyRole('admin'))
+                                <li class="nav-item d-flex align-items-center">
                                     <a class="text-decoration-none mr-5" href="{{route('admin.users.index')}}">
 
                                         Panel zarzadzajacy
                                     </a>
+                                </li>
+
                                 @endif
 
-
+                                    <li class="nav-item">
                                 <a href="{{route('posts.index')}}" class="nav-link">
                                     Tablica <span class="caret"></span>
                                 </a>
-
+                                    </li>
+                                    <li class="nav-item">
                                 <a href="/profile/{{Auth::user()->id}}" class="nav-link">
                                     Moj profil <span class="caret"></span>
                                 </a>
-
+                                    </li>
+                                    <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                    @if(Auth::user()->hasAnyRole('admin'))
-                                    <a class="dropdown-item" href="{{route('admin.users.index')}}">
 
-                                        Panel zarzadzajacy
-                                    </a>
-                                    @endif
 
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

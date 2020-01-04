@@ -48,7 +48,7 @@
 
     <div class="row pt-4">
         @foreach($user->posts as $post)
-            <div class="col-4 pb-4">
+            <div class="col-md-4 pb-4">
                 @can('view',$post)
                 <a href="/p/{{$post->id}}">
                     @endcan
