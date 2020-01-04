@@ -41,10 +41,10 @@ class CreateRoleUserTable extends Migration
     }
     private static function startArtisanCommands(){
 
-        if (File::exists(public_path('storage/')))
-            File::deleteDirectory(public_path('storage/'));
 
-            Artisan::call('storage:link');
+
+        Artisan::call('storage:link');
+
 
         Artisan::call( 'db:seed', [
                 '--class' => 'RolesTableSeeder',

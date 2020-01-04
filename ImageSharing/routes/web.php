@@ -44,20 +44,20 @@ Route::get('/users',function (){
     ]);
 })->name('users');
 
-Route::get('/deleteStorage',function (){
+/*Route::get('/deleteStorage',function (){
 
-    if (File::exists(public_path('storage/'))) {
-      $x =   File::deleteDirectory(public_path('storage/'));
 
-        return $x;
-    }
+    return   File::deleteDirectory(public_path('storage/'));
 
 
 
 
 
-});
-Route::get('/artisan',function (){
+
+
+
+});*/
+/*Route::get('/artisan',function (){
 
     Artisan::call('storage:link');
     return Artisan::output();
@@ -68,15 +68,8 @@ Route::get('/artisan',function (){
 
 
 
-});
-Route::get('/deleteStorage',function (){
+});*/
 
-    if (File::exists(public_path('storage/')))
-        return   (string)File::deleteDirectory(public_path('storage/'));
-
-
-
-});
 
 
 /* Drogi do postow */
