@@ -6,7 +6,7 @@ Pierwsza konfiguracja aplikacji:
 
 2.W folderze z aplikacją uruchomić wiersz poleceń i wpisać następujące komendy:
 
-composer instal --no-scripts
+composer install --no-scripts
 
 composer update
 
