@@ -5,9 +5,10 @@
         <h1>Posty uzytkownikow</h1>
         @foreach($posts as $post)
             <div class="row">
-                <div class="col-6 offset-3">
+                <div class="col-md-8 offset-2">
                     <a href="/profile/{{ $post->user->id }}">
-                        <img src="/storage/{{ $post->image }}" class="w-100">
+                        <img src="/storage/{{ $post->image }}" class="w-100" >
+
                     </a>
                 </div>
             </div>
@@ -27,7 +28,7 @@
         @endforeach
 
         <div class="row">
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-md-12 d-flex justify-content-center">
                 {{ $posts->links() }}
             </div>
         </div>

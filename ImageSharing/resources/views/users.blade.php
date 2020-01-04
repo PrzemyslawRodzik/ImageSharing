@@ -17,9 +17,9 @@
     </style>
 <div class="container">
     <div class="justify-content-center">
+<div class="table-responsive">
 
-
-    <table class="table">
+    <table class="table table-bordered table-hover">
         <thead>
         <tr>
             <th scope="col">Name</th>
@@ -49,6 +49,7 @@
             @endforeach
         </tbody>
     </table>
+</div>
         <div class="col-12 d-flex justify-content-center">
             {{ $users->links() }}
         </div>
