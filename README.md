@@ -13,3 +13,5 @@ composer update
 php artisan migrate
 
 php artisan serve
+
+php artisan storage:link
