@@ -28,6 +28,10 @@
 /* Podglad email */
 
 /* Strona startowa  */
+
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\File;
+
 Route::get('/',function (){
     return view('welcome');
 })->name('welcome');
@@ -40,6 +44,31 @@ Route::get('/users',function (){
     ]);
 })->name('users');
 
+/*Route::get('/deleteStorage',function (){
+
+
+    return   File::deleteDirectory(public_path('storage/'));
+
+
+
+
+
+
+
+
+});*/
+/*Route::get('/artisan',function (){
+
+    Artisan::call('storage:link');
+    return Artisan::output();
+
+
+
+
+
+
+
+});*/
 
 
 

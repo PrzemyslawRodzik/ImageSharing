@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 class CreateRoleUserTable extends Migration
@@ -20,14 +22,10 @@ class CreateRoleUserTable extends Migration
             $table->timestamps();
         });
 
-        Artisan::call( 'db:seed', [
-                '--class' => 'RolesTableSeeder',
-                '--force' => true ]
-        );
-        Artisan::call( 'db:seed', [
-                '--class' => 'UsersTableSeeder',
-                '--force' => true ]
-        );
+
+        CreateRoleUserTable::startArtisanCommands();
+
+
 
 
     }
@@ -40,5 +38,25 @@ class CreateRoleUserTable extends Migration
     public function down()
     {
         Schema::dropIfExists('role_user');
+    }
+    private static function startArtisanCommands(){
+
+
+
+        Artisan::call('storage:link');
+
+
+        Artisan::call( 'db:seed', [
+                '--class' => 'RolesTableSeeder',
+                '--force' => true ]
+        );
+        Artisan::call( 'db:seed', [
+                '--class' => 'UsersTableSeeder',
+                '--force' => true ]
+        );
+
+
+
+
     }
 }
