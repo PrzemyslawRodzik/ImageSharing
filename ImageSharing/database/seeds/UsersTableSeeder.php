@@ -56,10 +56,6 @@ class UsersTableSeeder extends Seeder
 
 
 
-        // $users = App\User::all()->intersect(App\User::whereIn('id', [1, 2, 3,4,5,6,7])->get());
-        //foreach ($users as $user)
-        //$user->roles()->attach($userRole);
-        //$userRole = Role::where('name','user')->first();
 
 
 
