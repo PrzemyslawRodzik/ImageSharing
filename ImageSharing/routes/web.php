@@ -1,5 +1,11 @@
 <?php
 
+
+
+use App\Post;
+use App\User;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\File;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,12 +17,10 @@
 |
 */
 
-/*Route::get('/adminPanel',function (){
-    return "Panel administratora";
-})->name('adminPanel');*/
 
 
-/*Route::get('/number','NumberController@number')->name('number');*/
+
+
 
 
 /* Podglad email */
@@ -29,8 +33,7 @@
 
 /* Strona startowa  */
 
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\File;
+
 
 Route::get('/',function (){
     return view('welcome');

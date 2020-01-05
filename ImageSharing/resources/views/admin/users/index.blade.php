@@ -52,9 +52,14 @@
         </tr>
 
             @endforeach
+
         </tbody>
     </table>
 </div>
+        <div class="col-md-12">
+
+            {{$users->links()}}
+        </div>
     </div>
 </div>
 @endsection
