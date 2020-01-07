@@ -31,47 +31,26 @@ use Illuminate\Support\Facades\File;
 });*/
 /* Podglad email */
 
+
+
+
 /* Strona startowa  */
-
-
-
 Route::get('/',function (){
     return view('welcome');
 })->name('welcome');
 /* Strona startowa  */
 
+
+/* Lista profili uzytkownikow  */
 Route::get('/users',function (){
     return view('users',[
         'users'=>\App\User::paginate(10),
 
     ]);
 })->name('users');
-
-/*Route::get('/deleteStorage',function (){
-
-
-    return   File::deleteDirectory(public_path('storage/'));
+/* Lista profili uzytkownikow  */
 
 
-
-
-
-
-
-
-});*/
-/*Route::get('/artisan',function (){
-
-    Artisan::call('storage:link');
-    return Artisan::output();
-
-
-
-
-
-
-
-});*/
 
 
 

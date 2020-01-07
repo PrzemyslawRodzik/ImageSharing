@@ -43,7 +43,7 @@ class CreateRoleUserTable extends Migration
 
 
 
-        Artisan::call('storage:link');
+
 
 
         Artisan::call( 'db:seed', [
@@ -55,7 +55,7 @@ class CreateRoleUserTable extends Migration
                 '--force' => true ]
         );
 
-
+        Artisan::call('storage:link', [] );
 
 
     }

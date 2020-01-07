@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
@@ -75,6 +76,13 @@ class PostsController extends Controller
         if( ! Post::find($id) ){
              return redirect()->route('welcome')->with('warning','Post o takim id nie istnieje');
         }
+
+
+       $pathToFile = Post::find($id)->get()->pluck('image')    ;
+
+
+        unlink(storage_path('app/public/'.$pathToFile));
+
         Post::destroy($id);
         return redirect()->route('profile.show', Auth::user()->id)->with('success','Usuwanie posta zakonczone powodzeniem.');
 
