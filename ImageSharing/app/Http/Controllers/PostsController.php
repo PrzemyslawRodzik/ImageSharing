@@ -78,10 +78,11 @@ class PostsController extends Controller
         }
 
 
-       $pathToFile = Post::find($id)->get()->pluck('image')    ;
+       $pathsToFile = Post::find($id)->get()->pluck('image')    ;
 
 
-        unlink(storage_path('app/public/'.$pathToFile));
+        foreach ($pathsToFile as $path)
+            unlink(storage_path('app/public/'.$path));
 
         Post::destroy($id);
         return redirect()->route('profile.show', Auth::user()->id)->with('success','Usuwanie posta zakonczone powodzeniem.');
