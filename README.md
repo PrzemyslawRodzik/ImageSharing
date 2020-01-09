@@ -14,3 +14,5 @@ composer update
 php artisan migrate
 
 php artisan serve
+
+Po wprowadzeniu komendy "php artisan migrate" oprócz stworzenia tabel do bazy danych zostanie dodanych 5 losowych użytkowników: ( hasło: 'zxczxc') + konto administratora o danych: login: admin@admin.com, haslo: 'zxczxc'.
