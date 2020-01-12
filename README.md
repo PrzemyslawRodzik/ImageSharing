@@ -1,4 +1,4 @@
-# ImageSharing
+﻿# ImageSharing
 Website for image sharing between users
 
 Pierwsze kroki w celu skonfigurowania aplikacji:
@@ -7,12 +7,14 @@ Pierwsze kroki w celu skonfigurowania aplikacji:
 
 2. W folderze z projektem w wierszu poleceń wprowadzić następujące polecenia:
 
-composer install --no-scripts
+1.composer install --no-scripts
 
-composer update
+2.composer update
 
-php artisan migrate
+3.php artisan migrate
 
-php artisan serve
+4.php artisan serve
 
 Po wprowadzeniu komendy "php artisan migrate" oprócz stworzenia tabel do bazy danych zostanie dodanych 5 losowych użytkowników: ( hasło: 'zxczxc') + konto administratora o danych: login: admin@admin.com, haslo: 'zxczxc'.
+
+W przypadku, gdy chcemy wygenerować losowych użytkowników i ich losowe posty za pośrednictwem komendy 'php artisan db:seed' należy 'wyłaczyć serwer', następnie  podmienić plik image.php znajdujący się w ...\ImageSharing\vendor\fzaninotto\faker\src\Faker\Provider Następnie wystarczy ponownie wpisać komendę nr 4.
