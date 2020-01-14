@@ -18,3 +18,5 @@ Pierwsze kroki w celu skonfigurowania aplikacji:
 Po wprowadzeniu komendy "php artisan migrate" oprócz stworzenia tabel do bazy danych zostanie dodanych 5 losowych użytkowników: ( hasło: 'zxczxc') + konto administratora o danych: login: admin@admin.com, haslo: 'zxczxc'.
 
 W przypadku, gdy chcemy wygenerować losowych użytkowników i ich losowe posty za pośrednictwem komendy 'php artisan db:seed' należy 'wyłaczyć serwer', następnie  podmienić plik image.php znajdujący się w ...\ImageSharing\vendor\fzaninotto\faker\src\Faker\Provider Następnie wystarczy ponownie wpisać komendę nr 4.
+
+W przypadku testowania generatora postów należy podmienić plik ImageTest.php znajdujący się w ...\ImageSharing\vendor\fzaninotto\faker\test\Faker\Provider
