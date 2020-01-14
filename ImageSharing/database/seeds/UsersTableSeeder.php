@@ -44,7 +44,7 @@ class UsersTableSeeder extends Seeder
 
 
 
-/* Tworzy 3 uzytkownikow i dodaje dla kazdego po 5 postow  */
+/* Tworzy 3 uzytkownikow i dodaje dla kazdego po 5 postow  
         $users = factory(App\User::class, 3)
             ->create()
             ->each(function ($user) {
@@ -52,7 +52,7 @@ class UsersTableSeeder extends Seeder
                     factory(App\Post::class, 5)->make()->toArray()
                 );
             });
-        /* Tworzy 3 uzytkownikow i dodaje dla kazdego po 5 postow  */
+         Tworzy 3 uzytkownikow i dodaje dla kazdego po 5 postow  */
 
 
 
