@@ -1,22 +1,34 @@
 ﻿# ImageSharing
-Website for image sharing between users
 
-Pierwsze kroki w celu skonfigurowania aplikacji:
+Website for image sharing between users written in a laravel.
 
-1. W phpmyadmin utworzyć bazę danych o nazwie: imageshare
+![Image of dashboard](https://i.ibb.co/8PV62VM/aaaaaaa.png)
+## Installation
+First you'll need to create empty database in mysql named "imageshare".
 
-2. W folderze z projektem w wierszu poleceń wprowadzić następujące polecenia:
+In your project location on the command line, type the following:
 
-1.composer install --no-scripts
 
-2.composer update
+```bash
+composer install --no-scripts
 
-3.php artisan migrate
+composer update
 
-4.php artisan serve
+php artisan migrate
 
-Po wprowadzeniu komendy "php artisan migrate" oprócz stworzenia tabel do bazy danych zostanie dodanych 5 losowych użytkowników: ( hasło: 'zxczxc') + konto administratora o danych: login: admin@admin.com, haslo: 'zxczxc'.
 
-W przypadku, gdy chcemy wygenerować losowych użytkowników i ich losowe posty za pośrednictwem komendy 'php artisan db:seed' należy 'wyłaczyć serwer', następnie  podmienić plik image.php znajdujący się w ...\ImageSharing\vendor\fzaninotto\faker\src\Faker\Provider Następnie wystarczy ponownie wpisać komendę nr 4.
+```
 
-W przypadku testowania generatora postów należy podmienić plik ImageTest.php znajdujący się w ...\ImageSharing\vendor\fzaninotto\faker\test\Faker\Provider
+## Usage
+To start application type:
+```php
+php artisan serve
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
